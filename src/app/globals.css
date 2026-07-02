@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #FAF8F5;
+  --color-ink: #1A1714;
+  --color-dust: #E8E2D9;
+  --color-gold: #C9A96E;
+  --color-blush: #F2EBE3;
+  --color-muted: #7A7168;
+  --font-family-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-family-sans: 'DM Sans', system-ui, sans-serif;
+  --animate-marquee: marquee 22s linear infinite;
+  --animate-fade-in: fade-in 0.4s ease forwards;
+  --animate-slide-in-right: slide-in-right 0.3s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+@keyframes slide-in-right {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+:root {
+  --background: 45 30% 98%;
+  --foreground: 20 15% 10%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 15% 10%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 15% 10%;
+  --primary: 20 15% 10%;
+  --primary-foreground: 45 30% 98%;
+  --secondary: 30 20% 91%;
+  --secondary-foreground: 20 15% 10%;
+  --muted: 30 15% 91%;
+  --muted-foreground: 25 10% 47%;
+  --accent: 30 20% 91%;
+  --accent-foreground: 20 15% 10%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 30 20% 88%;
+  --input: 30 20% 88%;
+  --ring: 36 52% 61%;
+  --radius: 0rem;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background-color: #FAF8F5;
+  color: #1A1714;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #FAF8F5; }
+::-webkit-scrollbar-thumb { background: #E8E2D9; border-radius: 2px; }
+*:focus-visible { outline: 2px solid #C9A96E; outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
